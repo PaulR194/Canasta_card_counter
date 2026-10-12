@@ -119,14 +119,14 @@
     position: fixed;
     top: max(6px, env(safe-area-inset-top));
     right: 10px;
-    font-size: 11px;
+    font-size: 22px;
     color: #999;
     pointer-events: none;
   }
 </style>
 </head>
 <body>
-<div id="ver">v11</div>
+<div id="ver">v12</div>
 <h1>Card counter</h1>
 <div id="deck"></div>
 <button id="reset-all">Reset all</button>
@@ -260,7 +260,7 @@ document.getElementById('reset-all').addEventListener('click', () => {
   if (confirm('Reset all tiles to zero?')) refreshers.forEach(fn => fn());
 });
 
-const APP_VERSION = 'v11';
+const APP_VERSION = 'v12';
 async function checkForUpdate() {
   try {
     const r = await fetch(location.pathname + '?t=' + Date.now(), { cache: 'no-store' });
